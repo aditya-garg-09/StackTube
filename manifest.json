@@ -11,7 +11,8 @@
      },
      "action": {
           "default_icon": "footage.png",
-          "default_title": "Stack Tube For YouTube"
+          "default_title": "Stack Tube For YouTube",
+          "default_popup": "popup.html"
      },
      "permissions": [
           "scripting",
