@@ -1,12 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Stack Tube For YouTube</title>
+     <title>Stack Tube</title>
+     <link rel="stylesheet" href="styles/popup.css">
 </head>
+
 <body>
-     <h1> Welcome to Stack Tube For YouTube</h1>
-      <p> personalized YouTube experience!</p>       
+     <div class="container">
+          <!-- Header -->
+          <header class="header">
+               <h1 class="header__title">Stack Tube</h1>
+               <p class="header__tagline">Custom YouTube Experience</p>
+          </header>
+
+          <!-- Tab Selection Section -->
+          <section class="section">
+               <div class="section__header">
+                    <h2 class="section__title">Your YouTube Tabs</h2>
+                    <span class="badge" id="selected-count">0</span>
+               </div>
+
+               <div id="tab-list" class="tab-list">
+                    <!-- Tabs will be dynamically inserted here -->
+                    <div class="loading">Loading tabs...</div>
+               </div>
+          </section>
+
+          <!-- Actions -->
+          <div class="actions">
+               <button id="save-btn" class="btn btn--primary" disabled>
+                    Save Collection
+               </button>
+               <button id="open-collections-btn" class="btn btn--secondary">
+                    View Collections
+               </button>
+          </div>
+
+          <!-- Collections View (Hidden by default) -->
+          <section id="collections-view" class="collections-view" style="display: none;">
+               <div class="section__header">
+                    <h2 class="section__title">Saved Collections</h2>
+                    <button id="back-btn" class="btn btn--text">← Back</button>
+               </div>
+               <div class="collections-actions">
+                    <button id="import-btn" class="btn btn--secondary btn--full">
+                         ↓ Import Collection
+                    </button>
+               </div>
+               <div id="collections-list" class="collections-list">
+                    <!-- Collections will be dynamically inserted here -->
+               </div>
+          </section>
+
+          <!-- Empty State -->
+          <div id="empty-state" class="empty-state" style="display: none;">
+               <svg class="empty-state__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M23 7l-7 5 7 5V7z" />
+                    <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+               </svg>
+               <p class="empty-state__text">No YouTube tabs open</p>
+               <p class="empty-state__subtext">Open some YouTube videos to get started</p>
+          </div>
+     </div>
+
+     <script type="module" src="popup.js"></script>
 </body>
+
 </html>

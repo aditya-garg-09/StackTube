@@ -1,24 +1,35 @@
 {
      "manifest_version": 3,
-     "name": "Stack Tube For YouTube",
-     "version": "1.0.0",
+     "name": "Stack Tube - YouTube Tab Manager",
+     "version": "1.1.0",
+     "description": "Organize, save, and share your YouTube tabs. Create collections, generate shareable links, and manage videos effortlessly.",
      "icons": {
-          "32": "footage.png"
+          "16": "assets/footage.png",
+          "32": "assets/footage.png",
+          "48": "assets/footage.png",
+          "128": "assets/footage.png"
      },
      "background": {
           "service_worker": "background.js",
           "type": "module"
      },
      "action": {
-          "default_icon": "footage.png",
-          "default_title": "Stack Tube For YouTube",
+          "default_icon": {
+               "16": "assets/footage.png",
+               "32": "assets/footage.png",
+               "48": "assets/footage.png",
+               "128": "assets/footage.png"
+          },
+          "default_title": "Stack Tube - YouTube Tab Manager",
           "default_popup": "popup.html"
      },
      "permissions": [
-          "scripting",
-          "activeTab"
+          "tabs",
+          "storage",
+          "scripting"
      ],
      "host_permissions": [
-          "https://*/*"
+          "https://www.youtube.com/*",
+          "https://youtu.be/*"
      ]
 }
